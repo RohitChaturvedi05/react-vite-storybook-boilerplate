@@ -1,0 +1,18 @@
+import { Controls, Meta, Story, Canvas, Markdown } from '@storybook/blocks';
+import * as ButtonStories from './Button.stories';
+
+import Readme from '../../README.md?raw';
+
+<Meta title="button" of={ButtonStories} />
+
+<Markdown>{Readme}</Markdown>
+
+<Canvas>
+    <Story of={ButtonStories.Playground} />
+</Canvas>
+
+# Props
+
+### Props of `<ButtonStories>`
+
+<Controls of={ButtonStories.Playground} />

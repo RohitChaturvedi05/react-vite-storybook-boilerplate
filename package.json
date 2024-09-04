@@ -1,0 +1,95 @@
+{
+  "name": "@rc-packages/react-vite-storybook-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "dist/index.c js.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist",
+    "readme.md"
+  ],
+  "scripts": {
+    "format": "prettier --write --parser typescript '**/*.{ts,tsx}'",
+    "build": "tsc && vite build && yarn run copy-package-json",
+    "lint": "eslint . --ext .ts,.tsx --ignore-path .gitignore --fix",
+    "test": "vitest run",
+    "test-watch": "vitest",
+    "test:ui": "vitest --ui",
+    "start": "storybook dev -p 8000",
+    "build-storybook": "storybook build",
+    "copy-package-json": "sh ./scripts/copyPackageJson.sh"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@chromatic-com/storybook": "^1.8.0",
+    "@storybook/addon-actions": "^8.2.9",
+    "@storybook/addon-docs": "^8.2.9",
+    "@storybook/addon-essentials": "^8.2.9",
+    "@storybook/addon-interactions": "^8.2.9",
+    "@storybook/addon-links": "^8.2.9",
+    "@storybook/addon-onboarding": "^8.2.9",
+    "@storybook/addon-themes": "^8.2.9",
+    "@storybook/addons": "^7.6.17",
+    "@storybook/api": "^7.6.17",
+    "@storybook/blocks": "^8.2.9",
+    "@storybook/react": "^8.2.9",
+    "@storybook/react-vite": "^8.2.9",
+    "@storybook/test": "^8.2.9",
+    "@testing-library/jest-dom": "^6.5.0",
+    "@testing-library/react": "^16.0.1",
+    "@types/react": "^18.3.5",
+    "@typescript-eslint/eslint-plugin": "^8.3.0",
+    "@typescript-eslint/parser": "^8.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react": "^7.35.0",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-storybook": "^0.8.0",
+    "husky": "^9.1.5",
+    "jsdom": "^25.0.0",
+    "lint-staged": "^15.2.9",
+    "prettier": "^3.3.3",
+    "semantic-release": "^24.1.0",
+    "storybook": "^8.2.9",
+    "storybook-addon-rtl": "^1.0.1",
+    "styled-components": "^6.1.13",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.2",
+    "vite-plugin-dts": "^4.0.3",
+    "vitest": "^2.0.5"
+  },
+  "peerDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "4.21.2"
+  },
+  "keywords": [
+    "React",
+    "vite",
+    "storybook",
+    "typescript",
+    "boilerplate",
+    "typescript-storybook-boilerplate"
+  ],
+  "dependencies": {},
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "npm run format",
+      "npm run lint"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RohitChaturvedi05/react-vite-storybook-boilerplate.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

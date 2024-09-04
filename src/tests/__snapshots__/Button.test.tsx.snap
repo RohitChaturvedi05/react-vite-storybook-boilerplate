@@ -1,0 +1,11 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Button component > Button should render correctly 1`] = `
+<div>
+  <button
+    class="sc-blHHSb bPhOSb"
+  >
+    Button
+  </button>
+</div>
+`;
